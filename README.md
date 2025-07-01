@@ -1,6 +1,6 @@
 # Projeto-9-MLops
 
-# 🚀 Projeto de MLOps com Naive Bayes
+# 🚀 Projeto de MLOps com Gaussian Naive Bayes
 
 Este repositório apresenta um pipeline completo de MLOps (Machine Learning Operations), cobrindo desde a preparação dos dados até o deploy e monitoramento de um modelo de machine learning em produção.
 
@@ -22,6 +22,7 @@ Automatizar e escalar o ciclo de vida de um modelo Gaussian Naive Bayes com hipe
 - **NumPy**: Operações matemáticas e manipulação de arrays numéricos.
 - **Matplotlib**: Visualização de dados e gráficos como curva ROC e matriz de confusão.
 - **Seaborn**: Criação de visualizações estatísticas mais elaboradas (como heatmaps).
+- **Requests**:
 
 Essas tecnologias cobrem todo o pipeline de machine learning: da preparação de dados à modelagem, avaliação, visualização e deploy com MLflow.
 
@@ -42,11 +43,12 @@ Essas tecnologias cobrem todo o pipeline de machine learning: da preparação de
    - Registro do modelo no MLflow.
 
 4. **🚀 Deploy do modelo**
-   - Modelo de machine learning disponibilizado localmente como serviço via MLflow, com endpoint HTTP para envio de dados e retorno de previsões. A aplicação permite consumo externo por meio de requisições REST.
+   - Modelo de machine learning disponibilizado localmente como serviço via MLflow, com endpoint HTTP para previsões. A aplicação permite consumo externo por meio de requisições REST.
 
 5. **📈 Monitoramento e Reavaliação**
    - Estrutura para revalidação periódica do modelo com novos dados.
-   - Logging (registro) de métricas de produção 
+   - Logging (registro) de métricas de produção
+
 ---
 
 ## ✅ Resultados
