@@ -1,4 +1,4 @@
-# Projeto-9-MLops
+# Projeto-8-MLops
 
 # 🚀 Projeto de MLOps com Gaussian Naive Bayes
 
