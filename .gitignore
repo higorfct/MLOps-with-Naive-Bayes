@@ -1,0 +1,4 @@
+# Arquivos ignorados
+__pycache__/
+*.pyc
+mlruns/
