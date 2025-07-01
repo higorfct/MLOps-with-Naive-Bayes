@@ -22,7 +22,7 @@ Automatizar e escalar o ciclo de vida de um modelo Gaussian Naive Bayes com hipe
 - **NumPy**: Operações matemáticas e manipulação de arrays numéricos.
 - **Matplotlib**: Visualização de dados e gráficos como curva ROC e matriz de confusão.
 - **Seaborn**: Criação de visualizações estatísticas mais elaboradas (como heatmaps).
-- **Requests**:
+- **Requests**: Fazer requisições HTTP
 
 Essas tecnologias cobrem todo o pipeline de machine learning: da preparação de dados à modelagem, avaliação, visualização e deploy com MLflow.
 
