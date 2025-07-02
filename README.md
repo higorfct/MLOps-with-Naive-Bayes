@@ -8,7 +8,7 @@ Este repositório apresenta um pipeline completo de MLOps (Machine Learning Oper
 
 ## 📌 Objetivo
 
-Automatizar e escalar o ciclo de vida de um modelo Gaussian Naive Bayes com hiperparâmetros utilizando práticas modernas de MLOps, como versionamento de modelos, rastreamento de experimentos, deployment via API e reprodutibilidade dos resultados. Aplicaremos essa pipeline de MLOps à base de dadoss **Credit.csv** de um banco Alemão.
+Automatizar e escalar o ciclo de vida de um modelo Gaussian Naive Bayes com hiperparâmetros utilizando práticas modernas de MLOps, como versionamento de modelos, rastreamento de experimentos, deployment via API e reprodutibilidade dos resultados. Aplicaremos essa pipeline de MLOps à base de dados **Credit.csv** de um banco Alemão para prever clientes que são bons e maus pagadores.
 
 ## 🤔 Por que Gaussian Naive Bayes?
 
