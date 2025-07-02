@@ -69,5 +69,5 @@ O modelo modelo alcançou os seguintes resultados nos dados de teste:
  - F1 Score (0,77): bom equilíbrio entre precisão e recall.
  - Precisão (0,77): entre as previsões positivas, 77% são corretas (baixo falso positivo).
  - Recall (0,77): o modelo identifica 77% dos casos positivos reais (baixo falso negativo).
- - Log Loss (10,93): relativamente alto, indicando que as probabilidades previstas podem não ser muito confiáveis.
+ - Log Loss (10,93): relativamente alto, indicando que as probabilidades previstas podem não ser muito confiáveis. Isso sugere que pode ser interessante re-treinar o modelo aplicando técnicas por exemplo de cross-validation K-Folds e combinação com outros algorítmos.
 
