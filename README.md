@@ -8,7 +8,11 @@ Este repositório apresenta um pipeline completo de MLOps (Machine Learning Oper
 
 ## 📌 Objetivo
 
-Automatizar e escalar o ciclo de vida de um modelo Gaussian Naive Bayes com hiperparâmetros utilizando práticas modernas de MLOps, como versionamento de modelos, rastreamento de experimentos, deployment via API e reprodutibilidade dos resultados.
+Automatizar e escalar o ciclo de vida de um modelo Gaussian Naive Bayes com hiperparâmetros utilizando práticas modernas de MLOps, como versionamento de modelos, rastreamento de experimentos, deployment via API e reprodutibilidade dos resultados. Aplicaremos essa pipeline de MLOps à base de dadoss **Credit.csv** de um banco Alemão.
+
+## 🤔 Por que Gaussian Naive Bayes?
+
+O GNB foi escolhido por ser simples, rápido e eficaz em tarefas de classificação com variáveis aproximadamente contínuas. Ele é uma boa baseline para problemas com dados que seguem (ou se aproximam de) uma distribuição normal. Além disso, seu baixo custo computacional e fácil interpretabilidade o tornam ideal para uma versão inicial do pipeline de MLOps.
 
 ---
 
