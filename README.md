@@ -1,77 +1,76 @@
-# Projeto-8-MLops
+# Project-8-MLops
 
-# 🚀 Projeto de MLOps com Gaussian Naive Bayes
+# 🚀 MLOps Project with Gaussian Naive Bayes
 
-Este repositório apresenta um pipeline completo de MLOps (Machine Learning Operations), cobrindo desde a preparação dos dados até o deploy e monitoramento de um modelo de machine learning em produção.
-
----
-
-## 📌 Objetivo
-
-Automatizar e escalar o ciclo de vida de um modelo Gaussian Naive Bayes com hiperparâmetros utilizando práticas modernas de MLOps, como versionamento de modelos, rastreamento de experimentos, deployment via API e reprodutibilidade dos resultados. Aplicaremos essa pipeline de MLOps à base de dados **Credit.csv** de um banco Alemão para prever clientes que são bons e maus pagadores.
-
-## 🤔 Por que Gaussian Naive Bayes?
-
-O GNB foi escolhido por ser simples, rápido e eficaz em tarefas de classificação com variáveis aproximadamente contínuas. Ele é uma boa baseline para problemas com dados que seguem (ou se aproximam de) uma distribuição normal. Além disso, seu baixo custo computacional e fácil interpretabilidade o tornam ideal para uma versão inicial do pipeline de MLOps.
+This repository presents a complete MLOps (Machine Learning Operations) pipeline, covering everything from data preparation to deployment and monitoring of a machine learning model in production.
 
 ---
 
-## ⚙️ Tecnologias e Ferramentas Utilizadas
+## 📌 Objective
+
+Automate and scale the lifecycle of a Gaussian Naive Bayes model with hyperparameters using modern MLOps practices, such as model versioning, experiment tracking, deployment via API, and reproducibility of results. We apply this MLOps pipeline to the **Credit.csv** dataset from a German bank to predict customers who are good or bad payers.
+
+## 🤔 Why Gaussian Naive Bayes?
+
+GNB was chosen because it is simple, fast, and effective for classification tasks with approximately continuous variables. It serves as a good baseline for problems with data that follow (or approximate) a normal distribution. Additionally, its low computational cost and easy interpretability make it ideal for an initial version of the MLOps pipeline.
+
+---
+
+## ⚙️ Technologies and Tools Used
 
 - **Python**  
-- **MLflow**: Rastreio de experimentos, registro e deploy de modelos de machine learning.
-- **MLflow.sklearn**: Integração entre o Scikit-learn e o MLflow para log e salvamento de modelos.
-- **Scikit-learn**: Treinamento de modelos (Naive Bayes), avaliação (acurácia, F1-score, AUC, etc.) e divisão dos dados com `train_test_split`.
-- **Pandas**: Leitura, manipulação e análise de dados em formato tabular (DataFrames).
-- **NumPy**: Operações matemáticas e manipulação de arrays numéricos.
-- **Matplotlib**: Visualização de dados e gráficos como curva ROC e matriz de confusão.
-- **Seaborn**: Criação de visualizações estatísticas mais elaboradas (como heatmaps).
-- **Requests**: Fazer requisições HTTP
+- **MLflow**: Experiment tracking, model registry, and deployment of machine learning models.
+- **MLflow.sklearn**: Integration between Scikit-learn and MLflow for model logging and saving.
+- **Scikit-learn**: Model training (Naive Bayes), evaluation (accuracy, F1-score, AUC, etc.), and data splitting with `train_test_split`.
+- **Pandas**: Reading, manipulating, and analyzing tabular data (DataFrames).
+- **NumPy**: Mathematical operations and manipulation of numerical arrays.
+- **Matplotlib**: Data visualization and charts such as ROC curve and confusion matrix.
+- **Seaborn**: Creation of more elaborate statistical visualizations (such as heatmaps).
+- **Requests**: Making HTTP requests
 
-Essas tecnologias cobrem todo o pipeline de machine learning: da preparação de dados à modelagem, avaliação, visualização e deploy com MLflow.
-
----
-
-## 🧠 Etapas do Pipeline MLOps
-
-1. **📊 Análise e Preparação dos Dados**
-   - Coleta, limpeza e transformação dos dados.
-   - Divisão em conjuntos de treino e teste.
-
-2. **🏗️ Treinamento do Modelo**
-   - Escolha do algoritmo Gaussian Naive Bayes
-   - Definição de hiperparâmetros var_smoothing para evitar problemas de probabilidade zero e melhorar a generalização do modelo.
-   - Registro dos experimentos no MLflow (parâmetros, métricas e artefatos).
-
-3. **📦 Versionamento e Registro**
-   - Registro do modelo no MLflow.
-
-4. **🚀 Deploy do modelo**
-   - Modelo de machine learning disponibilizado localmente como serviço via MLflow, com endpoint HTTP para previsões. A aplicação permite consumo externo por meio de requisições REST.
-
-5. **📈 Monitoramento e Reavaliação**
-   - Estrutura para revalidação periódica do modelo com novos dados.
-   - Logging (registro) de métricas de produção
+These technologies cover the entire machine learning pipeline: from data preparation to modeling, evaluation, visualization, and deployment with MLflow.
 
 ---
 
-## ✅ Resultados
+## 🧠 MLOps Pipeline Steps
 
-O modelo modelo alcançou os seguintes resultados nos dados de teste:
+1. **📊 Data Analysis and Preparation**
+   - Data collection, cleaning, and transformation.
+   - Split into training and test sets.
 
-| Métrica    | Valor                |
+2. **🏗️ Model Training**
+   - Selection of the Gaussian Naive Bayes algorithm
+   - Setting the `var_smoothing` hyperparameter to avoid zero probability issues and improve model generalization.
+   - Logging experiments in MLflow (parameters, metrics, and artifacts).
+
+3. **📦 Versioning and Registration**
+   - Registering the model in MLflow.
+
+4. **🚀 Model Deployment**
+   - Machine learning model made available locally as a service via MLflow, with an HTTP endpoint for predictions. The application allows external consumption through REST requests.
+
+5. **📈 Monitoring and Re-evaluation**
+   - Structure for periodic model revalidation with new data.
+   - Logging of production metrics
+
+---
+
+## ✅ Results
+
+The model achieved the following results on the test data:
+
+| Metric     | Value                |
 |------------|----------------------|
-| Acurácia   | 0.6967               |
+| Accuracy   | 0.6967               |
 | AUC        | 0.6600               |
 | F1 Score   | 0.7719               |
 | Log Loss   | 10.9332              |
-| Precisão   | 0.7739               |
+| Precision  | 0.7739               |
 | Recall     | 0.7700               |
 
- - Acurácia (~69,7%): modelo acerta quase 7 em cada 10 previsões.
- - AUC (0,66): capacidade moderada de distinguir entre classes.
- - F1 Score (0,77): bom equilíbrio entre precisão e recall.
- - Precisão (0,77): entre as previsões positivas, 77% são corretas (baixo falso positivo).
- - Recall (0,77): o modelo identifica 77% dos casos positivos reais (baixo falso negativo).
- - Log Loss (10,93): relativamente alto, indicando que as probabilidades previstas podem não ser muito confiáveis. Isso sugere que pode ser interessante re-treinar o modelo aplicando técnicas por exemplo de cross-validation K-Folds e combinação com outros algorítmos.
-
+ - Accuracy (~69.7%): the model gets almost 7 out of 10 predictions right.
+ - AUC (0.66): moderate ability to distinguish between classes.
+ - F1 Score (0.77): good balance between precision and recall.
+ - Precision (0.77): among positive predictions, 77% are correct (low false positive rate).
+ - Recall (0.77): the model identifies 77% of actual positive cases (low false negative rate).
+ - Log Loss (10.93): relatively high, indicating that the predicted probabilities may not be very reliable. This suggests that it may be worthwhile to retrain the model using techniques such as K-Folds cross-validation and combining with other algorithms.
