@@ -7,7 +7,7 @@ This repository presents a complete **MLOps (Machine Learning Operations)** pipe
 
 1. **Clone the repository and install dependencies:**
     ```bash 
-    git clone https://github.com/higorfct/Recommender-System-with-PySpark
+    git clone https://github.com/higorfct/MLOps-with-Naive-Bayes/tree/main
     cd MLOps-with-Naive-Bayes
     pip install -r requirements.txt
     ```
